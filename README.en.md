@@ -5,7 +5,7 @@
 > [!NOTE]
 > This Mod is for the [Steam version of Way of the Samurai 4](https://store.steampowered.com/app/312780/4/?l=english) only.
 
-Automatically saves the state you would return to by choosing Retry after death. Autosaves go to their own save data, separate from the five manual slots, so they never overwrite your manual saves.
+Adds an autosave and lets you continue from it on the Load screen. Autosaves go to their own save data, separate from the five manual slots, so they never overwrite your manual saves.
 
 ## Features
 
