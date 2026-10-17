@@ -1,0 +1,54 @@
+# Do not commit analysis material (analysis tools, analyzed information, exe, etc.)
+/research/
+
+# AI-related
+AGENTS.md
+CLAUDE.md
+.claude
+.codex
+.agents
+TODO.md
+.ignore
+
+# claude-code-runtime
+**/.claude/scheduled_tasks.lock
+**/.claude/scheduled_tasks.json
+**/.claude/routines/.state/
+**/.claude/worktrees/
+**/.claude/checkpoints/
+**/.claude/mailbox/
+**/.claude/agent-registry.json
+**/.claude/agent-memory-local
+**/.claude/first-run
+**/.claude/assistant-daemon-state.json
+
+# Build output
+build/
+out/
+stage/
+dist/
+*.obj
+*.o
+*.exp
+*.lib
+*.pdb
+*.ilk
+*.dll
+*.exe
+__pycache__/
+
+# Logs
+logs
+*.log
+
+# Editors
+*.local
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
