@@ -3,7 +3,7 @@
 [日本語](README.md)
 
 > [!NOTE]
-> This Mod is for the [Steam version of Way of the Samurai 4](https://store.steampowered.com/app/312780/) only.
+> This Mod is for the [Steam version of Way of the Samurai 4](https://store.steampowered.com/app/312780/4/?l=english) only.
 
 Automatically saves the state you would return to by choosing Retry after death. Autosaves go to their own save data, separate from the five manual slots, so they never overwrite your manual saves.
 
@@ -19,28 +19,43 @@ To fit six rows on screen, the rows of the Load list are spaced a little closer 
 
 ## Installation
 
+### Automatic installation (recommended)
+
+1. Close the game.
+2. Download and run [WayOfTheSamurai4ModInstaller.exe](https://github.com/nagataaaas/wots4-mods/releases/latest/download/WayOfTheSamurai4ModInstaller.exe).
+   - If "Windows protected your PC" appears, click "More info" → "Run anyway".
+   - When asked whether to allow it to make changes as administrator, click "Yes" (it writes to the game folder).
+3. Follow the screen and choose `autosave` in the list of Mods. Move with Up and Down, choose with Space and confirm with Enter.
+
+The ModLoader is installed along with it. The same steps update the Mod, and your settings (`config.ini`) are kept.
+
+<details>
+<summary>Manual installation</summary>
+
 > [!WARNING]
 > Install [wots4-mods (ModLoader)](https://github.com/nagataaaas/wots4-mods) first.
 
-1. Exit the game.
+1. Close the game.
 2. Download `wots4-mod-autosave-<version>.zip` from [Releases](../../releases) and extract it.
-3. Copy the extracted `mods` folder into the Way of the Samurai 4 installation folder (where `WayOfTheSamurai4.exe` is). If a `mods` folder already exists, merge them.
-4. Make sure `{Way of the Samurai 4 installation folder}/mods/autosave/mod.dll` exists, then start the game.
+3. Copy the extracted `mods` folder into the game's installation folder (the folder containing `WayOfTheSamurai4.exe`). If a `mods` folder already exists, merge the contents into it.
+4. Confirm that `{game installation folder}/mods/autosave/mod.dll` exists, then start the game.
 
 When updating, do not overwrite `mods/autosave/config.ini`, so that your settings are kept (replace only `mod.dll` and the other files).
 
+</details>
+
 ## Uninstallation
 
-1. Exit the game.
-2. Delete the `{Way of the Samurai 4 installation folder}/mods/autosave/` folder. Your settings are deleted with it.
+1. Close the game.
+2. Delete the `{game installation folder}/mods/autosave/` folder. The settings in it (`config.ini`) are deleted too.
 
 The autosave data (`S4-AUTOSAVE` in the save folder) stays. Without the Mod it does not appear on the Load screen, so delete it if you no longer need it. The save folder is usually `Documents\My Games\Ghostlight Ltd\Way of the Samurai 4\`.
 
 ## Settings
 
-Change them on the "Autosave" page of the game's options. They are saved to `{Way of the Samurai 4 installation folder}/mods/autosave/config.ini` when you close the options, and take effect immediately. You may also edit `config.ini` directly while the game is not running.
+Change them on the "Autosave" page (オートセーブ in the Japanese game), which is added to the options on the title screen and to 各種設定 in the pause menu. They are saved to `{game installation folder}/mods/autosave/config.ini` when you close the options, and take effect immediately. You may also edit `config.ini` directly while the game is not running.
 
-| Option | `config.ini` key | Default | Description |
-| --- | --- | --- | --- |
-| Autosave | `[autosave]` `enabled` | On (`1`) | Off (`0`) stops autosaving. The autosave row on the Load screen stays, so you can still load the last autosave. |
-| Minimum Autosave Interval | `[autosave]` `minimum_interval` | None (`0`) | Retry checkpoint updates within this many minutes of the last autosave are not saved. One of `0`, `1`, `3`, `5` or `10`. |
+| Option | Section | Key | Default | Description |
+| --- | --- | --- | --- | --- |
+| Autosave | `autosave` | `enabled` | `1` (On) | `0` (Off) stops autosaving. The autosave row on the Load screen stays, so you can still load the last autosave. |
+| Minimum Autosave Interval | `autosave` | `minimum_interval` | `0` (None) | Retry checkpoint updates within this many minutes of the last autosave are not saved. One of `0`, `1`, `3`, `5` or `10`. |
